@@ -6,7 +6,14 @@
 */
 wp_enqueue_script('jquery');
 
+function files_enqueue() {
+    wp_enqueue_script('bootstrapjs', get_template_directory_uri().'/assets/js/bootstrap.min.js', array(), '1.0.0', true);
+    wp_enqueue_script('customjs', get_template_directory_uri().'/assets/js/index.js', array(), '1.0.0', true);
+    wp_enqueue_style('bootstrapcss', get_template_directory_uri().'/assets/css/bootstrap.min.css', array(), '1.0.0', 'all' );
+    wp_enqueue_style('customcss', get_template_directory_uri().'/assets/css/index.css', array(), '1.0.0', 'all' );
+}
 
+add_action('wp_enqueue_scripts', 'files_enqueue');
 
 /*
 ========================================================
@@ -31,5 +38,3 @@ add_action('init', 'theme_supports');
 ========================================================
 */
 require get_template_directory() . '/inc/walker_class.php';
-
-?>
