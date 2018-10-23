@@ -7,9 +7,9 @@
         <div class="row">
 
             <div class="col-xs-12 col-sm-6 content">
-                <p>The new standard in</p>
-                <p>Micro-Influencer Marketing</p>
-                <p>Sample proof of heading goes here. Some random text to fill the space. Bla bla bla. A quick brown fox jumoed over a lazy dog.</p>
+                <p>Targeted Influencer marketing</p>
+                <p>at your fingertips</p>
+                <p>We help you build trust among people that your brand will need and get more users actively engaged with your brand using the community of some of the best and genuine influencers with a targeted audience.</p>
 
                 <div class="buttons">
                     <button>Let's get started</button>
@@ -93,8 +93,8 @@
                         <p class="content">We provide you with AI powered campaign insights</p>
                     </li>
                     <li>
-                        <p class="heading">1000+ Influencers</p>
-                        <p class="content">We connect you with over 1000 influencers</p>
+                        <p class="heading">Targeted Audience</p>
+                        <p class="content">We help you get the targeted audience that you'll needs</p>
                     </li>
                 </ul>
             </div>
