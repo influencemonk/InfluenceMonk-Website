@@ -24,9 +24,20 @@ a:hover{
 
 
 /*Navbar*/
-.navbar-fixed-top {
-    box-shadow: 0 0 5px 0px #aaa;
-    background-color: white;
+@media screen and (max-width: 767px){
+    .navbar-fixed-top {
+        background: white;
+        box-shadow: 0 0 5px 0px #aaa;
+    }
+}
+@media screen and (min-width: 768px) {
+    .navbar-fixed-top {
+        background: transparent;
+    }
+    .navbar-fixed-top.scrolled {
+        box-shadow: 0 0 5px 0px #aaa;
+        background-color: white;
+    }
 }
 @media screen and (min-width: 768px) {
     .navbar-header {
@@ -37,6 +48,12 @@ a:hover{
 }
 .navbar-brand{
     font-size: 2em;
+    padding: 15px 0px 0 40px;
+}
+@media screen and (max-width: 767px) {
+    .navbar-brand {
+        padding-left: 15px;
+    }
 }
 .navbar-brand span{
     font-weight: 700;
@@ -60,6 +77,11 @@ a:hover{
     text-transform: unset;
     margin-left: 10px;
 }
+@media screen and (max-width: 768px) {
+    .navbar-nav>li:last-child>a {
+        width: calc(100% - 30px);
+    }
+}
 .nav>li>a:focus, .nav>li>a:hover {
     color: red;
     background: transparent;
@@ -75,15 +97,10 @@ a:hover{
 .navbar-toggle .icon-bar {
     background: red;
 }
-@media screen and (max-width: 767px) {
-    .navbar-right {
-        border-bottom: 1px solid #ccc;
-    }
-}
 @media screen and (min-width: 768px) {
     .navbar-right {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0px;
+        padding-right: 40px;
     }
 }
 
@@ -98,6 +115,7 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding: 0 25px;
 }
 .footer .title p:nth-of-type(1){
     font-size: 1.5em;
@@ -138,6 +156,9 @@ a:hover{
 .banner{
     padding: 60px 0 30px;
     background: linear-gradient(#fff, #EFFBFF);
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
 }
 @media screen and (max-width: 767px) {
     .banner {
@@ -149,18 +170,24 @@ a:hover{
     flex-wrap: wrap;
     align-items: center;
 }
-
-.banner .row .content p:nth-of-type(1) {
-    font-size: 1.8em;
-    margin: 0;
+.banner .row .content h1 {
+    font-size: 1em;
+}
+.banner .row .content span {
+    display: block;
+}
+.banner .row .content h1 span:nth-of-type(1) {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+    font-weight: 800;
+    line-height: 1em;
+}
+.banner .row .content h1 span:nth-of-type(2) {
+    font-size: 2em;
+    margin: -5px 0 10px;
     font-weight: 600;
 }
-.banner .row .content p:nth-of-type(2) {
-    font-size: 2.5em;
-    margin: -5px 0 10px;
-    font-weight: 800;
-}
-.banner .row .content p:nth-of-type(3) {
+.banner .row .content h1 span:nth-of-type(3) {
     font-size: 1.2em;
     margin: 0 0 40px;
     font-weight: 500;
@@ -171,6 +198,7 @@ a:hover{
     border-radius: 5px;
     transition: .4s;
     cursor: pointer;
+    outline: 0;
 }
 .banner .row .content .buttons button:nth-of-type(1) {
     background: red;
@@ -183,10 +211,22 @@ a:hover{
     color: black;
     margin-left: 20px;
 }
+@media screen and (max-width: 400px) {
+    .banner .row .content .buttons button:nth-of-type(2) {
+        margin-left: 0;
+        margin-top: 15px;
+        display: block;
+    }
+}
 .banner .row .content .buttons button:nth-of-type(2):hover {
     background: red;
     color: white;
     border-color: red;
+}
+.banner .row .content .buttons button:nth-of-type(2) .glyphicon {
+    font-size: 12px;
+    margin-left: 4px;
+    display: inline-block;
 }
 .banner .row .image img:nth-of-type(1) {
     position: absolute;
@@ -197,10 +237,12 @@ a:hover{
 }
 .banner .row .image img:nth-of-type(2) {
     position: relative;
-    height: 350px;
-    margin-top: 100px;
+    height: 550px;
+    margin-top: 50px;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .why-us{
@@ -215,6 +257,12 @@ a:hover{
     left: 0;
     width: 100%;
     margin-bottom: -70px;
+}
+.why-us h2 {
+    font-size: 1em;
+}
+.why-us h2 span {
+    display: block;
 }
 .why-us .header .subheading {
     text-align: center;
@@ -259,13 +307,30 @@ a:hover{
 }
 
 .how-we-help{
-    margin: 30px 0 150px;
-    padding: 50px 0 0;
+    margin: -60px 0 270px;
+    padding: 25px 0 0;
     position: relative;
     background: #EFFBFF;
 }
+@media screen and (max-width: 768px) {
+    .how-we-help {
+        margin: -170px 0 365px;
+        padding: 20px 0 0;
+    }
+}
 .how-we-help .container {
-    transform: translateY(100px);
+    transform: translateY(210px);
+}
+@media screen and (max-width: 768px) {
+    .how-we-help .container {
+        transform: translateY(320px);
+    }
+}
+.how-we-help .header h2 {
+    font-size: 1em;
+}
+.how-we-help .header h2 span {
+    display: block;
 }
 .how-we-help .header .subheading {
     text-align: center;
@@ -289,6 +354,7 @@ a:hover{
     box-shadow: 0 2px 5px 1px #ddd;
     left: 50%;
     transform: translateX(-50%);
+    align-items: center;
 }
 .how-we-help .row .image img{
     width: 100%;
@@ -328,7 +394,14 @@ a:hover{
 }
 
 .contact-us {
+    text-align: center;
     margin-bottom: 50px;
+}
+.contact-us h2 {
+    font-size: 1em;
+}
+.contact-us h2 span {
+    display: block;
 }
 .contact-us .title {
     text-align: center;
@@ -338,20 +411,21 @@ a:hover{
 }
 .contact-us .content {
     text-align: center;
-    margin: 0 0 30px;
+    margin: 5px 0 30px;
     font-size: 1.1em;
     font-weight: 500;
 }
 .contact-us textarea {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     display: block;
     margin: 0 auto 15px;
-    border: 2px solid #777;
+    border: 1px solid #999;
+    box-shadow: none !important;
 }
 .contact-us .button-div {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     display: block;
     margin: 0 auto 10px;
 }
@@ -360,8 +434,17 @@ a:hover{
     display: inline-block;
     margin: 0;
     border-radius: 4px 0 0 4px;
-    border: 2px solid #777;
+    border: 1px solid #999;
     border-right: 0;
+    height: auto;
+    padding: 10px 12px;
+    box-shadow: none !important;
+    transition: .3s ease;
+}
+.contact-us .button-div input.submitted {
+    width: 0;
+    border: 0;
+    padding: 0;
 }
 .contact-us .button-div button {
     margin: 0;
@@ -370,4 +453,11 @@ a:hover{
     border-radius: 0 4px 4px 0;
     background: red;
     color: white;
+    padding: 10px 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+.contact-us .button-div button.submitted {
+    border-radius: 4px;
+    width: 100%;
 }

@@ -9,6 +9,10 @@
 
     <?php wp_head(); ?>
 
+    <meta name="og:title" property="og:title" content="<?php bloginfo('name') ?> <?php wp_title('  |  '); ?>">
+    <meta name="og:type" property="og:type" content="website">
+    <meta name="og:description" property="og:description" content="<?php bloginfo('description'); ?>">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
