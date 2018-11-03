@@ -8,7 +8,9 @@ function homeScrollDown() {
 
 jQuery(document).ready(function(){
 
-    //Navbar Scroll function
+    // -------------------------------------------------------------------
+    // Navbar Scroll function
+    // -------------------------------------------------------------------
     jQuery(window).scroll(function(){
         if (jQuery(window).scrollTop() > 50 && !jQuery('.navbar-fixed-top').hasClass('scrolled')) {
             jQuery('.navbar-fixed-top').addClass('scrolled');
@@ -17,6 +19,9 @@ jQuery(document).ready(function(){
         }
     });
 
+    // -------------------------------------------------------------------
+    // Contact Form Submit
+    // -------------------------------------------------------------------
     jQuery('.contact-us .btn').click(function(){
 
         let fd = new FormData();
@@ -38,6 +43,13 @@ jQuery(document).ready(function(){
                 jQuery('.contact-us .btn').text('Submitted');
             }
         })
-    })
+    });
 
+    // -------------------------------------------------------------------
+    // If page size is less
+    // -------------------------------------------------------------------
+    if (jQuery('body').height() < jQuery(window).height()) {
+        jQuery('.footer').addClass('fixed');
+        jQuery('body').addClass('vertical-center');
+    }
 })

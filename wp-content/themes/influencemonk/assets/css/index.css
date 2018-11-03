@@ -1,4 +1,16 @@
-/*General*/
+/*
+1. General
+2. Navbar
+3. Footer
+4. Home Page
+*/
+
+
+/*
+--------------------------------------------------------------------
+1. General
+--------------------------------------------------------------------
+*/
 body{
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif !important;
@@ -21,9 +33,20 @@ a:hover{
 .row {
     margin: 0;
 }
+body.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 6em;
+}
 
 
-/*Navbar*/
+
+/*
+--------------------------------------------------------------------
+2. Navbar
+--------------------------------------------------------------------
+*/
 @media screen and (max-width: 767px){
     .navbar-fixed-top {
         background: white;
@@ -105,11 +128,21 @@ a:hover{
 }
 
 
-/*Footer*/
+/*
+--------------------------------------------------------------------
+3. Footer
+--------------------------------------------------------------------
+*/
 .footer {
     background: #004067;
     padding: 40px 0;
     color: white;
+}
+.footer.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 .footer .row {
     display: flex;
@@ -152,7 +185,11 @@ a:hover{
 }
 
 
-/*Home Page*/
+/*
+--------------------------------------------------------------------
+4. Home Page
+--------------------------------------------------------------------
+*/
 .banner{
     padding: 60px 0 30px;
     background: linear-gradient(#fff, #EFFBFF);
@@ -170,11 +207,12 @@ a:hover{
     flex-wrap: wrap;
     align-items: center;
 }
-.banner .row .content h1 {
-    font-size: 1em;
-}
 .banner .row .content span {
     display: block;
+}
+.banner .row .content h1 {
+    font-size: 1em;
+    color: #004067;
 }
 .banner .row .content h1 span:nth-of-type(1) {
     font-size: 2.5em;
@@ -187,10 +225,11 @@ a:hover{
     margin: -5px 0 10px;
     font-weight: 600;
 }
-.banner .row .content h1 span:nth-of-type(3) {
+.banner .row .content h1 ~ span {
     font-size: 1.2em;
     margin: 0 0 40px;
     font-weight: 500;
+    color: #004067;
 }
 .banner .row .content .buttons button {
     border: 1px solid;
@@ -258,23 +297,20 @@ a:hover{
     width: 100%;
     margin-bottom: -70px;
 }
-.why-us h2 {
-    font-size: 1em;
-}
-.why-us h2 span {
-    display: block;
-}
 .why-us .header .subheading {
     text-align: center;
     font-size: 1.1em;
     margin: 0;
     font-weight: 500;
+    display: block;
+    color: #004067;
 }
 .why-us .header .heading {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
     font-weight: 700;
     margin: 5px 0 25px;
+    color: #004067;
 }
 .why-us .row {
     display: flex;
@@ -326,23 +362,20 @@ a:hover{
         transform: translateY(320px);
     }
 }
-.how-we-help .header h2 {
-    font-size: 1em;
-}
-.how-we-help .header h2 span {
-    display: block;
-}
 .how-we-help .header .subheading {
     text-align: center;
     font-size: 1.1em;
     margin: 0;
     font-weight: 500;
+    display: block;
+    color: #004067;
 }
 .how-we-help .header .heading {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
     font-weight: 700;
     margin: 5px 0 25px;
+    color: #004067;
 }
 .how-we-help .row {
     width: 90%;
@@ -397,23 +430,20 @@ a:hover{
     text-align: center;
     margin-bottom: 50px;
 }
-.contact-us h2 {
-    font-size: 1em;
-}
-.contact-us h2 span {
-    display: block;
-}
 .contact-us .title {
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 700;
     margin: 0;
+    color: #004067;
 }
 .contact-us .content {
     text-align: center;
     margin: 5px 0 30px;
     font-size: 1.1em;
     font-weight: 500;
+    display: block;
+    color: #004067;
 }
 .contact-us textarea {
     width: 100%;
