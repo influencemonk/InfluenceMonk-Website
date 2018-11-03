@@ -3,6 +3,8 @@
 2. Navbar
 3. Footer
 4. Home Page
+5. Error Page
+6. Default Page
 */
 
 
@@ -490,4 +492,26 @@ body.vertical-center {
 .contact-us .button-div button.submitted {
     border-radius: 4px;
     width: 100%;
+}
+
+
+/*
+--------------------------------------------------------------------
+5. Error Page
+--------------------------------------------------------------------
+*/
+.page-404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*
+--------------------------------------------------------------------
+6. Default Page
+--------------------------------------------------------------------
+*/
+.page {
+    padding: 1em;
 }
