@@ -30,7 +30,7 @@ class Walker_Nav_Primary extends Walker_Nav_menu {
         $id = apply_filters('nav_menu_item_id', 'menu-item-'.$item->ID, $item, $args);
         $id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
 
-        $output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
+        $output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . ' itemprop="name" ' . '>';
 
         $attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
         $attributes .= ! empty( $item->target ) ? ' target="' . esc_attr($item->target) . '"' : '';
@@ -40,7 +40,7 @@ class Walker_Nav_Primary extends Walker_Nav_menu {
         $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
 
         $item_output = $args->before;
-        $item_output .= '<a' . $attributes . '>';
+        $item_output .= '<a' . $attributes . ' itemprop="url" >';
         $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
         $item_output .= ( $depth == 0 && $args->walker->has_children ) ? ' <b class="caret"></b></a>' : '</a>';
         $item_output .= $args->after;

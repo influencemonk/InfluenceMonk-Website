@@ -9,6 +9,13 @@ function homeScrollDown() {
 jQuery(document).ready(function(){
 
     // -------------------------------------------------------------------
+    // Add Itemprops and Itemscopes
+    // -------------------------------------------------------------------
+    jQuery('#navbar ul.nav').attr('itemscope', '');
+    jQuery('#navbar ul.nav').attr('itemtype', 'http://www.schema.org/SiteNavigationElement');
+
+
+    // -------------------------------------------------------------------
     // Navbar Scroll function
     // -------------------------------------------------------------------
     jQuery(window).scroll(function(){
