@@ -12,7 +12,7 @@
                 <span>We help you with branding and generating leads using many micro influencers who have a small targeted following that trusts them.</span>
 
                 <div class="buttons">
-                    <button>Let's get started</button>
+                    <button data-toggle="modal" data-target="#getstarted">Let's get started</button>
                     <button onclick="homeScrollDown()">Tell me more<span class="glyphicon glyphicon-chevron-down"></span></button>
                 </div>
             </div>
@@ -115,6 +115,26 @@
             <input type="text" name="emailFrom" placeholder="Your email" class="form-control"/>
             <button class="btn" class="submit" type="button">Let's Go</button>
         </div>
+    </div>
+</div>
+
+<div class="modal fade" id="getstarted" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Let's get Started</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" placeholder="Your name" name="user-name" class="form-control">
+                <input type="email" placeholder="Your email" name="user-email" class="form-control">
+                <input type="text" placeholder="Your Instagram id" name="user-insta-id" class="form-control">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn">Submit</button>
+            </div>
+        </div>
+
     </div>
 </div>
 <?php get_footer(); ?>

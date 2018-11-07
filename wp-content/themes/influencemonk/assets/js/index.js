@@ -1,19 +1,13 @@
 function homeScrollDown() {
-    let scrollDownHeight = jQuery('.why-us').offset().top;
+    let scrollDownHeight = jQuery('.why-us').offset().top - jQuery('.navbar').height();
 
     jQuery('html, body').animate({
         scrollTop: scrollDownHeight
     }, 500);
 }
 
+
 jQuery(document).ready(function(){
-
-    // -------------------------------------------------------------------
-    // Add Itemprops and Itemscopes
-    // -------------------------------------------------------------------
-    jQuery('#navbar ul.nav').attr('itemscope', '');
-    jQuery('#navbar ul.nav').attr('itemtype', 'http://www.schema.org/SiteNavigationElement');
-
 
     // -------------------------------------------------------------------
     // Navbar Scroll function
@@ -45,7 +39,7 @@ jQuery(document).ready(function(){
             contentType: false,
             success: function(){
                 jQuery('.contact-us input[name=emailFrom]').addClass('submitted');
-                jQuery('.contact-us input[name=emailFrom]').val('s');
+                jQuery('.contact-us input[name=emailFrom]').val('');
                 jQuery('.contact-us .btn').addClass('submitted');
                 jQuery('.contact-us .btn').text('Submitted');
             }
@@ -59,4 +53,27 @@ jQuery(document).ready(function(){
         jQuery('.footer').addClass('fixed');
         jQuery('body').addClass('vertical-center');
     }
+
+    // -------------------------------------------------------------------
+    // Leads Submit
+    // -------------------------------------------------------------------
+    jQuery('#getstarted button.btn').click(function() {
+        let fdLeads = new FormData();
+
+        fdLeads.append('username', jQuery('#getstarted input[name=user-name]').val());
+        fdLeads.append('useremail', jQuery('#getstarted input[name=user-email]').val());
+        fdLeads.append('userinstaid', jQuery('#getstarted input[name=user-insta-id]').val());
+
+        jQuery.ajax({
+            url: '/api-submit-leads',
+            method: 'POST',
+            data: fdLeads,
+            processData: false,
+            contentType: false,
+            success: function(){
+                jQuery('#getstarted input').val('');
+                jQuery('#getstarted').modal('hide');
+            }
+        })
+    })
 })

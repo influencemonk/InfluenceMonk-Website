@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Submit Contact Form
+    Template Name: Api Submit Contact Form
  */
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $wpdb->insert(
         'contactForm',
         array(
-            'subject' => $subject,
+            'subject' => $messages,
             'email' => $email_from
         ),
         array(

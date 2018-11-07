@@ -7,10 +7,10 @@
         <div class="col-xs-12 col-sm-8 social-icons">
             <span>Follow us around the web</span>
             <span>
-                <img src="<?php echo get_template_directory_uri() ?>/img/facebook_logo.png" alt="facebook logo" />
-                <img src="<?php echo get_template_directory_uri() ?>/img/instagram_logo.png" alt="instagram logo"/>
-                <img src="<?php echo get_template_directory_uri() ?>/img/twitter_logo.png" alt="twitter logo"/>
-                <img src="<?php echo get_template_directory_uri() ?>/img/linkedin_logo.png" alt="linkedin logo"/>
+                <a href="https://www.facebook.com/influencemonk"><img src="<?php echo get_template_directory_uri() ?>/img/facebook_logo.png" alt="facebook logo" /></a>
+                <a href="https://www.instagram.com/influencemonk"><img src="<?php echo get_template_directory_uri() ?>/img/instagram_logo.png" alt="instagram logo"/></a>
+                <a href="https://www.twitter.com/influencemonk"><img src="<?php echo get_template_directory_uri() ?>/img/twitter_logo.png" alt="twitter logo"/></a>
+                <a href="https://www.linkedin.com/company/influencemonk"><img src="<?php echo get_template_directory_uri() ?>/img/linkedin_logo.png" alt="linkedin logo"/></a>
             </span>
         </div>
     </div>

@@ -27,7 +27,7 @@
         </button>
         <a class="navbar-brand" href="<?php echo get_home_url(); ?> "> <span>influence</span>monk </a>
     </div>
-    <div id="navbar" class="collapse navbar-collapse navbar-right">
+    <div id="navbar" class="collapse navbar-collapse navbar-right"  itemscope itemtype="http://www.schema.org/SiteNavigationElement">
 
         <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'false', 'menu_class' => 'nav navbar-nav navbar-right', 'walker' => new Walker_Nav_Primary)); ?>
 
