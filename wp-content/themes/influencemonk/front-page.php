@@ -6,14 +6,14 @@
 
             <div class="col-xs-12 col-sm-7 content">
                 <h1>
-                    <span>Targeted Influencer marketing</span>
+                    <span>Targeted Influencer Marketing</span>
                     <span>at your fingertips</span>
                 </h1>
-                <span>We help you with branding and generating leads using many micro influencers who have a small targeted following that trusts them.</span>
+                <span>We help you with branding and generating leads using many micro-influencers who have a small targeted following that trusts them.</span>
 
                 <div class="buttons">
-                    <button data-toggle="modal" data-target="#getstarted">Let's get started</button>
-                    <button onclick="homeScrollDown()">Tell me more<span class="glyphicon glyphicon-chevron-down"></span></button>
+                    <a href="https://calendly.com/influencemonk/influencer-marketing">Let's get started</a>
+                    <button onclick="homeScrollDown()">Tell me more<span class="glyphicon glyphicon-menu-down"></span></button>
                 </div>
             </div>
 
@@ -29,7 +29,7 @@
     <div class="container">
 
         <div class="header">
-            <span class="subheading">Micro-Influencer marketing takes Influencer Marketing to the next level</span>
+            <span class="subheading">Micro-Influencer Marketing takes Influencer Marketing to the next level!</span>
             <h2 class="heading">Why Micro-Influencer Marketing?</h2>
         </div>
 
@@ -38,28 +38,28 @@
                 <img src="<?php echo get_template_directory_uri() ?>/img/higher_conversions.png" alt="higher conversion"/>
                 <div class="content">
                     <h3 class="title">Quality Conversions</h3>
-                    <p class="description">Get high quality conversions than traditional campaigns.</p>
+                    <p class="description">Get higher quality conversions than traditional campaigns.</p>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <img src="<?php echo get_template_directory_uri() ?>/img/cheaper.png" alt="cheaper"/>
                 <div class="content">
                     <h3 class="title">36% Lower Cost</h3>
-                    <p class="description">A more efficient solution for your marketing campaigns than Facebook Ads.</p>
+                    <p class="description">A more cost-efficient solution for your marketing campaigns.</p>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <img src="<?php echo get_template_directory_uri() ?>/img/loyal_community.png" alt="loyal community"/>
                 <div class="content">
                     <h3 class="title">Loyal Community</h3>
-                    <p class="description">Build a community of customers who recommend you o other prospects.</p>
+                    <p class="description">Build a loyal community of customers who recommend you to other prospects.</p>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <img src="<?php echo get_template_directory_uri() ?>/img/customers_trust.png" alt="customers trust"/>
                 <div class="content">
-                    <h3 class="title">Customer's Trust</h3>
-                    <p class="description">People trusts people, not ads. Gain your potential customer's trusts.</p>
+                    <h3 class="title">Customers' Trust</h3>
+                    <p class="description">People trust people, not ads. Gain your potential customers' trust.</p>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
 <div class="how-we-help">
     <div class="container">
         <div class="header">
-            <span class="subheading">We provide you with expertise, insights and do the heavy lifting</span>
+            <span class="subheading">We provide you with expertise, insights and do the heavy lifting.</span>
             <h2 class="heading">How do we help you succeed?</h2>
         </div>
         <div class="row">
@@ -82,23 +82,23 @@
                 <ul>
                     <li>
                         <h3 class="heading">1000+ Influencers</h3>
-                        <p class="content">We connect you with over 1000 influencers</p>
+                        <p class="content">We connect you with over 1000 influencers.</p>
                     </li>
                     <li>
                         <h3 class="heading">Shipment &amp; Tracking</h3>
-                        <p class="content">We handle all your product shipment &amp; tracking</p>
+                        <p class="content">We handle all your product shipment & tracking.</p>
                     </li>
                     <li>
                         <h3 class="heading">AI Powered Insights</h3>
-                        <p class="content">We provide you with AI powered campaign insights</p>
+                        <p class="content">We provide you with AI powered campaign insights.</p>
                     </li>
                     <li>
                         <h3 class="heading">Targeted Audience</h3>
-                        <p class="content">We help you select your audience and reach them</p>
+                        <p class="content">We help you select your audience and reach them.</p>
                     </li>
                     <li>
                         <h3 class="heading">Post Tracking</h3>
-                        <p class="content">We check the post contents and timing</p>
+                        <p class="content">We check the posts' content and timing.</p>
                     </li>
                 </ul>
             </div>

@@ -54,6 +54,19 @@ jQuery(document).ready(function(){
         jQuery('body').addClass('vertical-center');
     }
 
+
+
+    // -------------------------------------------------------------------
+    // Call Are You an Influencer Modal
+    // -------------------------------------------------------------------
+    jQuery('.menu-item:last-child').click(function(event) {
+        event.preventDefault();
+        jQuery('#getstarted.modal').modal();
+    })
+
+
+
+
     // -------------------------------------------------------------------
     // Leads Submit
     // -------------------------------------------------------------------

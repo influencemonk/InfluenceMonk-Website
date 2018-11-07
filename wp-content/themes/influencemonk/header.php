@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo get_home_url(); ?> "> <span>influence</span>monk </a>
+        <a class="navbar-brand" href="<?php echo get_home_url(); ?> "> <span>influence</span>Monk </a>
     </div>
     <div id="navbar" class="collapse navbar-collapse navbar-right"  itemscope itemtype="http://www.schema.org/SiteNavigationElement">
 
