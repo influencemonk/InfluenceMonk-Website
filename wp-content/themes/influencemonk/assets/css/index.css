@@ -49,6 +49,9 @@ body.vertical-center {
     justify-content: center;
     padding-top: 6em;
 }
+.hide {
+    display: none !important;
+}
 
 
 

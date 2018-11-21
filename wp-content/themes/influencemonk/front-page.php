@@ -12,7 +12,7 @@
                 <span>We help you with branding and generating leads using many micro-influencers who have a small targeted following that trusts them.</span>
 
                 <div class="buttons">
-                    <a href="https://calendly.com/influencemonk/influencer-marketing">Let's get started</a>
+                    <a target="_blank" href="https://calendly.com/influencemonk/influencer-marketing">Let's get started</a>
                     <button onclick="homeScrollDown()">Tell me more<span class="glyphicon glyphicon-menu-down"></span></button>
                 </div>
             </div>
@@ -108,9 +108,10 @@
 
 <div class="contact-us">
     <div class="container">
-            <h2 class="title">Want us to get back to you?</h2>
-            <span class="content">We will get in touch</span>
+        <h2 class="title">Want us to get back to you?</h2>
+        <span class="content">We will get in touch</span>
         <textarea rows="5" class="form-control" placeholder="Your message" name="message"></textarea>
+        <p class="message hide"></p>
         <div class="button-div">
             <input type="text" name="emailFrom" placeholder="Your email" class="form-control"/>
             <button class="btn" class="submit" type="button">Let's Go</button>
@@ -129,6 +130,7 @@
                 <input type="text" placeholder="Your name" name="user-name" class="form-control">
                 <input type="email" placeholder="Your email" name="user-email" class="form-control">
                 <input type="text" placeholder="Your Instagram id" name="user-insta-id" class="form-control">
+                <p class="message hide"></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn">Submit</button>

@@ -1,3 +1,5 @@
+const emailSentTo = 'sagnikpaul2882@gmail.com';
+
 function homeScrollDown() {
     let scrollDownHeight = jQuery('.why-us').offset().top - jQuery('.navbar').height();
 
@@ -25,25 +27,55 @@ jQuery(document).ready(function(){
     // -------------------------------------------------------------------
     jQuery('.contact-us .btn').click(function(){
 
-        let fd = new FormData();
-        fd.append('emailTo', 'sagnikpaul2882@gmail.com');
-        fd.append('emailFrom', jQuery('.contact-us input[name=emailFrom]').val());
-        fd.append('message', jQuery('.contact-us textarea').val());
-        fd.append('subject', 'Home Contact Us Form');
+        let emailFrom = jQuery('.contact-us input[name=emailFrom]');
+        let emailMessage = jQuery('.contact-us textarea');
+        let button = jQuery('.contact-us .btn');
+        let messageSpan = jQuery('.contact-us p');
 
-        jQuery.ajax({
-            url: '/api-submit-contact-form',
-            method: 'POST',
-            data: fd,
-            processData: false,
-            contentType: false,
-            success: function(){
-                jQuery('.contact-us input[name=emailFrom]').addClass('submitted');
-                jQuery('.contact-us input[name=emailFrom]').val('');
-                jQuery('.contact-us .btn').addClass('submitted');
-                jQuery('.contact-us .btn').text('Submitted');
-            }
-        })
+        messageSpan.addClass('hide');
+
+        if (/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(emailFrom.val()) == false){
+            messageSpan.removeClass('hide');
+            messageSpan.text('Please provide a valid email');
+        }else if (emailMessage.val().trim().length === 0) {
+            messageSpan.removeClass('hide');
+            messageSpan.text('Please provide a valid message');
+        }else {
+
+            button.text('Submitting');
+
+            let apiBody = {
+                "to": [emailSentTo],
+                "subject": "Contact Form",
+                "body": "Email From:" + emailFrom.val() + "\nMessage: " + emailMessage.val()
+            };
+
+            jQuery.ajax({
+                url: 'https://infinite-peak-58946.herokuapp.com/Blog/sendEmail',
+                method: 'POST',
+                crossDomain: true,
+                data: JSON.stringify(apiBody),
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                success: function (res) {
+                    if (res.error) {
+                        messageSpan.removeClass('hide');
+                        messageSpan.text(res.message);
+                    } else {
+                        emailFrom.addClass('submitted');
+                        emailFrom.val('');
+                        emailMessage.val('');
+                        button.addClass('submitted');
+                        button.text('Submitted');
+                    }
+                },
+                error: function (err) {
+                    messageSpan.removeClass('hide');
+                    messageSpan.text(err);
+                }
+            });
+        }
     });
 
     // -------------------------------------------------------------------
@@ -71,22 +103,53 @@ jQuery(document).ready(function(){
     // Leads Submit
     // -------------------------------------------------------------------
     jQuery('#getstarted button.btn').click(function() {
-        let fdLeads = new FormData();
 
-        fdLeads.append('username', jQuery('#getstarted input[name=user-name]').val());
-        fdLeads.append('useremail', jQuery('#getstarted input[name=user-email]').val());
-        fdLeads.append('userinstaid', jQuery('#getstarted input[name=user-insta-id]').val());
+        let username = jQuery('#getstarted input[name=user-name]');
+        let useremail = jQuery('#getstarted input[name=user-email]');
+        let userinsta = jQuery('#getstarted input[name=user-insta-id]');
+        let message = jQuery('#getstarted p');
 
-        jQuery.ajax({
-            url: '/api-submit-leads',
-            method: 'POST',
-            data: fdLeads,
-            processData: false,
-            contentType: false,
-            success: function(){
-                jQuery('#getstarted input').val('');
-                jQuery('#getstarted').modal('hide');
-            }
-        })
+        if (/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(useremail.val()) == false) {
+            message.text('Please enter valid email id');
+            message.removeClass('hide');
+        }else if (username.val().trim().length === 0) {
+            message.text('Please enter proper name');
+            message.removeClass('hide');
+        }else if (userinsta.val().trim().length === 0) {
+            message.text('Please enter proper instagram id');
+            message.removeClass('hide');
+        }else {
+
+            let apiBody = {
+                "to": [emailSentTo],
+                "subject": "Leads",
+                "body": "Email From:" + useremail.val() + "\nName: " + username.val() + "\nInstagram ID: " + userinsta.val()
+            };
+
+            jQuery.ajax({
+                url: 'https://infinite-peak-58946.herokuapp.com/Blog/sendEmail',
+                method: 'POST',
+                crossDomain: true,
+                data: JSON.stringify(apiBody),
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                success: function (res) {
+                    if (res.error) {
+                        message.removeClass('hide');
+                        message.text(res.message);
+                    } else {
+                        message.removeClass('hide');
+                        message.text(res.message);
+                    }
+                },
+                error: function (err) {
+                    message.removeClass('hide');
+                    message.text('Something went wrong');
+                    console.log(err);
+                }
+            });
+        }
+
     })
 })
