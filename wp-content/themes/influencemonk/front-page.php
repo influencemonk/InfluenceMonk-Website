@@ -106,13 +106,24 @@
     </div>
 </div>
 
+<div class="bottom-cta">
+    <div class="container">
+        <h2 class="title">Ready to rock your influencer marketing campaigns?</h2>
+        <button data-toggle="modal" data-target="#getstarted">Get started now</button>
+    </div>
+</div>
+
 <div class="contact-us">
     <div class="container">
         <h2 class="title">Want us to get back to you?</h2>
         <span class="content">We will get in touch</span>
-        <textarea rows="5" class="form-control" placeholder="Your message" name="message"></textarea>
+        <div class="formgroup">
+            <label>Your message</label>
+            <textarea rows="5" class="form-control" name="message"></textarea>
+        </div>
         <p class="message hide"></p>
         <div class="button-div">
+            <label>Your email</label>
             <input type="text" name="emailFrom" placeholder="Your email" class="form-control"/>
             <button class="btn" class="submit" type="button">Let's Go</button>
         </div>
@@ -127,9 +138,18 @@
                 <h4 class="modal-title">Let's get Started</h4>
             </div>
             <div class="modal-body">
-                <input type="text" placeholder="Your name" name="user-name" class="form-control">
-                <input type="email" placeholder="Your email" name="user-email" class="form-control">
-                <input type="text" placeholder="Your Instagram id" name="user-insta-id" class="form-control">
+                <div class="modal-formgroup">
+                    <label>Name</label>
+                    <input type="text" name="user-name" class="form-control">
+                </div>
+                <div class="modal-formgroup">
+                    <label>Email</label>
+                    <input type="email" name="user-email" class="form-control">
+                </div>
+                <div class="modal-formgroup">
+                    <label>Instagram Id</label>
+                    <input type="text" name="user-insta-id" class="form-control">
+                </div>
                 <p class="message hide"></p>
             </div>
             <div class="modal-footer">

@@ -34,7 +34,7 @@ jQuery(document).ready(function(){
 
         messageSpan.addClass('hide');
 
-        if (/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(emailFrom.val()) == false){
+        if (/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(emailFrom.val()) === false){
             messageSpan.removeClass('hide');
             messageSpan.text('Please provide a valid email');
         }else if (emailMessage.val().trim().length === 0) {
@@ -94,9 +94,7 @@ jQuery(document).ready(function(){
     jQuery('.menu-item:last-child').click(function(event) {
         event.preventDefault();
         jQuery('#getstarted.modal').modal();
-    })
-
-
+    });
 
 
     // -------------------------------------------------------------------
@@ -119,7 +117,8 @@ jQuery(document).ready(function(){
             message.text('Please enter proper instagram id');
             message.removeClass('hide');
         }else {
-
+            message.text('Submitting...');
+            message.removeClass('hide');
             let apiBody = {
                 "to": [emailSentTo],
                 "subject": "Leads",
@@ -139,6 +138,12 @@ jQuery(document).ready(function(){
                         message.removeClass('hide');
                         message.text(res.message);
                     } else {
+                        username.val('');
+                        useremail.val('');
+                        userinsta.val('');
+                        username.parent().find('label').removeClass('active');
+                        useremail.parent().find('label').removeClass('active');
+                        userinsta.parent().find('label').removeClass('active');
                         message.removeClass('hide');
                         message.text(res.message);
                     }
@@ -150,6 +155,31 @@ jQuery(document).ready(function(){
                 }
             });
         }
+    });
 
-    })
-})
+
+    // -------------------------------------------------------------------
+    // Modal Labels
+    // -------------------------------------------------------------------
+    jQuery('#getstarted .modal-body input').focusin(function() {
+        jQuery(this).parent().find('label').addClass('active');
+    });
+    jQuery('#getstarted .modal-body input').focusout(function() {
+        if (jQuery(this).val().trim() === ''){
+            jQuery(this).parent().find('label').removeClass('active');
+        }
+    });
+
+
+    // -------------------------------------------------------------------
+    // Contact Us Labels
+    // -------------------------------------------------------------------
+    jQuery('.contact-us').find('textarea, input').focusin(function() {
+        jQuery(this).parent().find('label').addClass('active');
+    });
+    jQuery('.contact-us').find('textarea, input').focusout(function() {
+        if (jQuery(this).val().trim() === ''){
+            jQuery(this).parent().find('label').removeClass('active');
+        }
+    });
+});

@@ -441,10 +441,35 @@ body.vertical-center {
     margin: 0;
     font-weight: 500;
 }
-
+.bottom-cta {
+    text-align: center;
+    padding: 2em 0 4em;
+}
+.bottom-cta .title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+    color: #004067;
+}
+.bottom-cta button {
+    margin: 1.25em 0 0;
+    border-radius: 4px;
+    background: transparent;
+    color: red;
+    padding: 10px 12px;
+    font-weight: 700;
+    transition: .3s;
+    border: 1px solid red;
+}
+.bottom-cta button:hover {
+    background: red;
+    color: white;
+}
 .contact-us {
     text-align: center;
-    margin-bottom: 50px;
+    padding: 40px 0 50px;
+    background: #EFFBFF;
 }
 .contact-us .container {
     display: flex;
@@ -466,6 +491,7 @@ body.vertical-center {
     color: #004067;
 }
 .contact-us textarea {
+    background: transparent;
     width: 100%;
     max-width: 700px;
     display: block;
@@ -473,11 +499,18 @@ body.vertical-center {
     border: 1px solid #999;
     box-shadow: none !important;
 }
+.contact-us .formgroup {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+}
 .contact-us .button-div {
     width: 100%;
     max-width: 700px;
     display: block;
     margin: 0 auto 10px;
+    position: relative;
 }
 .contact-us .button-div input {
     width: calc(100% - 100px);
@@ -490,6 +523,7 @@ body.vertical-center {
     padding: 10px 12px;
     box-shadow: none !important;
     transition: .3s ease;
+    background: transparent;
 }
 .contact-us .button-div input.submitted {
     width: 0;
@@ -510,6 +544,24 @@ body.vertical-center {
 .contact-us .button-div button.submitted {
     border-radius: 4px;
     width: 100%;
+}
+.contact-us label {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    padding: 0 7px;
+    background: #EFFBFF;
+    margin: 0;
+    font-weight: 400;
+    transition: .3s;
+}
+.contact-us label.active {
+    top: -8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.contact-us .message {
+    font-weight: 700;
 }
 
 
@@ -552,11 +604,52 @@ body.vertical-center {
     width: 100%;
     max-width: 600px;
 }
+.modal-header {
+    background: red;
+    border-radius: 5px 5px 0 0;
+    color: white;
+}
+.modal .close {
+    text-shadow: none;
+    color: white;
+    opacity: 1;
+    outline: 0;
+}
 .modal-body {
     margin: -20px 0;
 }
+.modal-body .modal-formgroup {
+    position: relative;
+}
+.modal-body .modal-formgroup label {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin: 0;
+    background: white;
+    transition: .3s;
+}
+.modal-body .modal-formgroup label.active {
+    font-size: 11px;
+    top: -10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: 600;
+    color: red;
+}
+.modal-body .message {
+    margin-bottom: 20px;
+    margin-top: -5px;
+    font-weight: 900;
+}
 .modal input {
     margin: 20px 0;
+}
+.modal input:focus {
+    border-color: #ff0000aa;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,0,0,.6);
 }
 .modal .btn {
     border: 1px solid red;
