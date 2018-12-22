@@ -182,4 +182,10 @@ jQuery(document).ready(function(){
             jQuery(this).parent().find('label').removeClass('active');
         }
     });
+
+
+    // -------------------------------------------------------------------
+    // Select2
+    // -------------------------------------------------------------------
+    jQuery('.blog-search select').select2();
 });

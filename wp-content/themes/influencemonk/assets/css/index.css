@@ -6,6 +6,7 @@
 5. Error Page
 6. Default Page
 7. Modal
+8. Blog Page
 */
 
 
@@ -103,13 +104,13 @@ body.vertical-center {
     transition: .3s;
 }
 .navbar-nav>li.current-menu-item>a {
-    color: red;
+    color: darkcyan;
     text-decoration: underline !important;
     text-underline-position: under;
 }
 .navbar-nav>li:last-child>a {
-    border: 1px solid red;
-    color: red;
+    border: 1px solid darkcyan;
+    color: darkcyan;
     text-transform: unset;
     margin-left: 10px;
 }
@@ -120,7 +121,7 @@ body.vertical-center {
 }
 .nav>li>a:focus,
 .nav>li>a:hover {
-    color: red;
+    color: darkcyan;
     background: transparent;
 }
 @media screen and (min-width: 768px){
@@ -129,10 +130,10 @@ body.vertical-center {
     }
 }
 .navbar-toggle {
-    border-color: red;
+    border-color: darkcyan;
 }
 .navbar-toggle .icon-bar {
-    background: red;
+    background: darkcyan;
 }
 @media screen and (min-width: 768px) {
     .navbar-right {
@@ -148,7 +149,7 @@ body.vertical-center {
 --------------------------------------------------------------------
 */
 .footer {
-    background: #004067;
+    background: darkcyan;
     padding: 40px 0;
     color: white;
 }
@@ -256,9 +257,9 @@ body.vertical-center {
     display: inline-block;
 }
 .banner .row .content .buttons a {
-    background: red;
+    background: darkcyan;
     color: white;
-    border-color: red;
+    border-color: darkcyan;
 }
 .banner .row .content .buttons button {
     background: transparent;
@@ -274,9 +275,9 @@ body.vertical-center {
     }
 }
 .banner .row .content .buttons button:hover {
-    background: red;
+    background: darkcyan;
     color: white;
-    border-color: red;
+    border-color: darkcyan;
 }
 .banner .row .content .buttons button .glyphicon {
     font-size: 12px;
@@ -456,14 +457,14 @@ body.vertical-center {
     margin: 1.25em 0 0;
     border-radius: 4px;
     background: transparent;
-    color: red;
+    color: darkcyan;
     padding: 10px 12px;
     font-weight: 700;
     transition: .3s;
-    border: 1px solid red;
+    border: 1px solid darkcyan;
 }
 .bottom-cta button:hover {
-    background: red;
+    background: darkcyan;
     color: white;
 }
 .contact-us {
@@ -535,7 +536,7 @@ body.vertical-center {
     width: 100px;
     float: right;
     border-radius: 0 4px 4px 0;
-    background: red;
+    background: darkcyan;
     color: white;
     padding: 10px 12px;
     font-weight: 700;
@@ -605,7 +606,7 @@ body.vertical-center {
     max-width: 600px;
 }
 .modal-header {
-    background: red;
+    background: darkcyan;
     border-radius: 5px 5px 0 0;
     color: white;
 }
@@ -637,7 +638,7 @@ body.vertical-center {
     padding-top: 0;
     padding-bottom: 0;
     font-weight: 600;
-    color: red;
+    color: darkcyan;
 }
 .modal-body .message {
     margin-bottom: 20px;
@@ -652,12 +653,200 @@ body.vertical-center {
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,0,0,.6);
 }
 .modal .btn {
-    border: 1px solid red;
-    color: red;
+    border: 1px solid darkcyan;
+    color: darkcyan;
     transition: .4s;
     background: white;
 }
 .modal .btn:hover {
-    background: red;
+    background: darkcyan;
     color: white;
+}
+
+
+/*
+--------------------------------------------------------------------
+1. Blog Page
+--------------------------------------------------------------------
+*/
+.blogs-banner {
+    position: relative;
+    margin: 65px 0 25px;
+}
+.blogs-banner .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.blogs-banner .image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: darkcyan;
+    opacity: .8;
+
+}
+.blogs-banner .image img {
+    width: 100%;
+    object-fit: cover;
+}
+.blogs-banner .container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.blogs-banner .container h1 {
+    margin: 0;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    position: relative;
+    font-weight: 700;
+}
+.blogs-banner .container .row {
+    transform: translateY(50px);
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px 0.1px #ccc;
+    margin-top: -20px;
+    background: white;
+    align-items: stretch;
+}
+@media screen and (min-width: 768px) {
+    .blogs-banner .container .row {
+        display: flex;
+    }
+}
+.blogs-banner .container .row .blog-first-image {
+    padding: 0;
+}
+.blogs-banner .container .row .blog-first-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px 0 0 4px;
+}
+.blogs-banner .container .row .blog-first-content {
+    padding: 15px 25px;
+}
+.blogs-banner .container .row h2 {
+    margin: 5px 0 20px;
+    font-size: 1.75em;
+    font-weight: 600;
+}
+.blogs-banner .container .row p {
+    line-height: 1.5;
+    margin: 15px 0 25px;
+    font-size: 1em;
+    font-weight: 500;
+}
+.blogs-banner .container .row .read-more {
+    background: darkcyan;
+    color: white;
+    font-size: .9em;
+    padding: 8px 17px;
+    border: 1px solid darkcyan;
+    border-radius: 4px;
+    margin: 8px 0 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.blog-search {
+    padding: 30px 0;
+}
+.blog-search p {
+    text-align: center;
+    font-size: 1.5em;
+}
+.blog-search p select {
+    font-weight: 600;
+    border-width: 0 0 1px 0;
+    padding: 3px 0;
+    outline: 0;
+}
+.blog-container .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.blog-container .blog-box {
+    margin-bottom: 2em;
+}
+.blog-container .blog-box .image {
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+.blog-container .blog-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+.blog-container .blog-box:hover img {
+    transform: scale(1.2);
+}
+.blog-container .blog-box h3 {
+    margin: 15px 0 0;
+    font-weight: 600;
+    font-size: 1.65em;
+}
+.blog-container .blog-box p {
+    margin: 5px 0 10px;
+    font-size: 1.2em;
+}
+.blog-container .blog-box .blog-footer {
+    display: flex;
+    justify-content: space-between;
+    color: darkcyan;
+    font-weight: 600;
+    font-size: 1.25em;
+}
+.blog-container .blog-box .divider {
+    border-top: 5px solid darkcyan;
+    width: 50%;
+    float: left;
+    margin: 15px 0 40px;
+    transition: .5s;
+}
+.blog-container .blog-box:hover .divider {
+    width: 100%;
+}
+.blog-container .load-more {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    border: 1px solid darkcyan;
+    background: darkcyan;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.2em;
+    padding: 7px 18px;
+    margin-bottom: 30px;
+}
+.blog-container .load-more span {
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+
+
+
+
+
+
+.select2-container {
+    width: auto !important;
+}
+.select2-container--default .select2-selection--single {
+    border-width: 0 0 1px 0 !important;
+    border-radius: 0 !important;
+    height: 32px !important;
+}
+.select2 * {
+    outline: 0;
+    cursor: pointer;
 }
