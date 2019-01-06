@@ -124,7 +124,7 @@
         <p class="message hide"></p>
         <div class="button-div">
             <label>Your email</label>
-            <input type="text" name="emailFrom" placeholder="Your email" class="form-control"/>
+            <input type="text" name="emailFrom" class="form-control"/>
             <button class="btn" class="submit" type="button">Let's Go</button>
         </div>
     </div>

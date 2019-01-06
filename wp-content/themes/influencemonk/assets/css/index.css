@@ -104,13 +104,13 @@ body.vertical-center {
     transition: .3s;
 }
 .navbar-nav>li.current-menu-item>a {
-    color: darkcyan;
+    color: red;
     text-decoration: underline !important;
     text-underline-position: under;
 }
 .navbar-nav>li:last-child>a {
-    border: 1px solid darkcyan;
-    color: darkcyan;
+    border: 1px solid red;
+    color: red;
     text-transform: unset;
     margin-left: 10px;
 }
@@ -121,7 +121,7 @@ body.vertical-center {
 }
 .nav>li>a:focus,
 .nav>li>a:hover {
-    color: darkcyan;
+    color: red;
     background: transparent;
 }
 @media screen and (min-width: 768px){
@@ -130,10 +130,10 @@ body.vertical-center {
     }
 }
 .navbar-toggle {
-    border-color: darkcyan;
+    border-color: red;
 }
 .navbar-toggle .icon-bar {
-    background: darkcyan;
+    background: red;
 }
 @media screen and (min-width: 768px) {
     .navbar-right {
@@ -149,7 +149,7 @@ body.vertical-center {
 --------------------------------------------------------------------
 */
 .footer {
-    background: darkcyan;
+    background: red;
     padding: 40px 0;
     color: white;
 }
@@ -257,9 +257,9 @@ body.vertical-center {
     display: inline-block;
 }
 .banner .row .content .buttons a {
-    background: darkcyan;
+    background: red;
     color: white;
-    border-color: darkcyan;
+    border-color: red;
 }
 .banner .row .content .buttons button {
     background: transparent;
@@ -275,9 +275,9 @@ body.vertical-center {
     }
 }
 .banner .row .content .buttons button:hover {
-    background: darkcyan;
+    background: red;
     color: white;
-    border-color: darkcyan;
+    border-color: red;
 }
 .banner .row .content .buttons button .glyphicon {
     font-size: 12px;
@@ -457,14 +457,14 @@ body.vertical-center {
     margin: 1.25em 0 0;
     border-radius: 4px;
     background: transparent;
-    color: darkcyan;
+    color: red;
     padding: 10px 12px;
     font-weight: 700;
     transition: .3s;
-    border: 1px solid darkcyan;
+    border: 1px solid red;
 }
 .bottom-cta button:hover {
-    background: darkcyan;
+    background: red;
     color: white;
 }
 .contact-us {
@@ -536,7 +536,7 @@ body.vertical-center {
     width: 100px;
     float: right;
     border-radius: 0 4px 4px 0;
-    background: darkcyan;
+    background: red;
     color: white;
     padding: 10px 12px;
     font-weight: 700;
@@ -606,7 +606,7 @@ body.vertical-center {
     max-width: 600px;
 }
 .modal-header {
-    background: darkcyan;
+    background: red;
     border-radius: 5px 5px 0 0;
     color: white;
 }
@@ -638,7 +638,7 @@ body.vertical-center {
     padding-top: 0;
     padding-bottom: 0;
     font-weight: 600;
-    color: darkcyan;
+    color: red;
 }
 .modal-body .message {
     margin-bottom: 20px;
@@ -653,20 +653,20 @@ body.vertical-center {
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,0,0,.6);
 }
 .modal .btn {
-    border: 1px solid darkcyan;
-    color: darkcyan;
+    border: 1px solid red;
+    color: red;
     transition: .4s;
     background: white;
 }
 .modal .btn:hover {
-    background: darkcyan;
+    background: red;
     color: white;
 }
 
 
 /*
 --------------------------------------------------------------------
-1. Blog Page
+8. Blog Page
 --------------------------------------------------------------------
 */
 .blogs-banner {
@@ -688,7 +688,7 @@ body.vertical-center {
     left: 0;
     height: 100%;
     width: 100%;
-    background: darkcyan;
+    background: red;
     opacity: .8;
 
 }
@@ -709,10 +709,10 @@ body.vertical-center {
     font-weight: 700;
 }
 .blogs-banner .container .row {
-    transform: translateY(50px);
+    transform: translateY(80px);
     border-radius: 4px;
     box-shadow: 0px 2px 2px 0.1px #ccc;
-    margin-top: -20px;
+    margin-top: -50px;
     background: white;
     align-items: stretch;
 }
@@ -727,36 +727,40 @@ body.vertical-center {
 .blogs-banner .container .row .blog-first-image img {
     height: 100%;
     width: 100%;
+    max-height: 350px;
     object-fit: cover;
     border-radius: 4px 0 0 4px;
 }
 .blogs-banner .container .row .blog-first-content {
-    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 .blogs-banner .container .row h2 {
-    margin: 5px 0 20px;
+    margin: 25px 0 20px;
     font-size: 1.75em;
     font-weight: 600;
 }
 .blogs-banner .container .row p {
     line-height: 1.5;
-    margin: 15px 0 25px;
+    margin: 0 0 25px;
     font-size: 1em;
     font-weight: 500;
 }
 .blogs-banner .container .row .read-more {
-    background: darkcyan;
+    background: red;
     color: white;
     font-size: .9em;
     padding: 8px 17px;
-    border: 1px solid darkcyan;
+    border: 1px solid red;
     border-radius: 4px;
-    margin: 8px 0 10px;
+    margin: 0 0 20px;
     text-transform: uppercase;
     font-weight: 600;
 }
 .blog-search {
-    padding: 30px 0;
+    padding: 70px 0 30px;
 }
 .blog-search p {
     text-align: center;
@@ -802,12 +806,12 @@ body.vertical-center {
 .blog-container .blog-box .blog-footer {
     display: flex;
     justify-content: space-between;
-    color: darkcyan;
+    color: red;
     font-weight: 600;
-    font-size: 1.25em;
+    font-size: .9em;
 }
 .blog-container .blog-box .divider {
-    border-top: 5px solid darkcyan;
+    border-top: 5px solid red;
     width: 50%;
     float: left;
     margin: 15px 0 40px;
@@ -820,8 +824,8 @@ body.vertical-center {
     left: 50%;
     position: relative;
     transform: translateX(-50%);
-    border: 1px solid darkcyan;
-    background: darkcyan;
+    border: 1px solid red;
+    background: red;
     color: white;
     border-radius: 4px;
     font-size: 1.2em;
@@ -834,12 +838,64 @@ body.vertical-center {
 }
 
 
+/*
+--------------------------------------------------------------------
+8. Blog Single Page
+--------------------------------------------------------------------
+*/
+.blog-single .row:nth-of-type(1) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 6em;
+}
+.blog-single .row:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 3em;
+}
+.blog-single div {
+    position: relative;
+}
+.blog-single .title {
+    margin-top: 0;
+    font-size: 2.25em;
+    font-weight: 600;
+}
+.blog-single .date {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.blog-single .author {
+    font-size: 1em;
+    font-weight: 600;
+    color: red;
+    text-align: right;
+}
+.blog-single img {
+    width: 100%;
+}
+.blog-single .share-icons {
+    position: sticky;
+    top: 80px;
+}
+.blog-single .share-icons a img {
+    margin-bottom: 20px;
+    max-width: 30px;
+    filter: brightness(0);
+    transition: .4s;
+    margin-right: 10px;
+}
+.blog-single .share-icons a img:hover {
+    filter: none;
+}
 
 
 
 
 .select2-container {
-    width: auto !important;
+    /*width: auto !important;*/
 }
 .select2-container--default .select2-selection--single {
     border-width: 0 0 1px 0 !important;
@@ -849,4 +905,8 @@ body.vertical-center {
 .select2 * {
     outline: 0;
     cursor: pointer;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: red !important;
+    font-weight: 600 !important;
 }

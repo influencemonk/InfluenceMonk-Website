@@ -9,9 +9,32 @@
 
     <?php wp_head(); ?>
 
-    <meta name="og:title" property="og:title" content="<?php bloginfo('name') ?> <?php wp_title('  |  '); ?>">
-    <meta name="og:type" property="og:type" content="website">
-    <meta name="og:description" property="og:description" content="<?php bloginfo('description'); ?>">
+    <?php
+    if (is_single()) {
+
+        if (have_posts()):
+            while (have_posts()): the_post(); ?>
+
+                <meta property="og:url" content="<?php echo get_the_permalink(); ?>" />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content="<?php echo get_the_title(); ?>" />
+                <meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
+                <meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:site" content="<?php echo get_site_url(); ?>" />
+
+            <?php endwhile;
+        endif;
+
+        wp_reset_query(); ?>
+
+    <?php }else { ?>
+	    <meta name="og:title" property="og:title" content="<?php bloginfo('name') ?> <?php wp_title('  |  '); ?>">
+        <meta name="og:type" property="og:type" content="website">
+        <meta name="og:description" property="og:description" content="<?php bloginfo('description'); ?>">
+    <?php } ?>
+
+
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

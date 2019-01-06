@@ -15,9 +15,9 @@ jQuery(document).ready(function(){
     // Navbar Scroll function
     // -------------------------------------------------------------------
     jQuery(window).scroll(function(){
-        if (jQuery(window).scrollTop() > 50 && !jQuery('.navbar-fixed-top').hasClass('scrolled')) {
+        if (jQuery(window).scrollTop() > 0 && !jQuery('.navbar-fixed-top').hasClass('scrolled')) {
             jQuery('.navbar-fixed-top').addClass('scrolled');
-        }else if (jQuery(window).scrollTop() <= 50 && jQuery('.navbar-fixed-top').hasClass('scrolled')){
+        }else if (jQuery(window).scrollTop() === 0 && jQuery('.navbar-fixed-top').hasClass('scrolled')){
             jQuery('.navbar-fixed-top').removeClass('scrolled');
         }
     });
@@ -188,4 +188,81 @@ jQuery(document).ready(function(){
     // Select2
     // -------------------------------------------------------------------
     jQuery('.blog-search select').select2();
+
+
+
+    // -------------------------------------------------------------------
+    // Blogs Filtering Ajax
+    // -------------------------------------------------------------------
+    let blogsNumber = 0;
+
+    jQuery('.load-more').click(function() {
+        let thisText = jQuery(this).html();
+        jQuery(this).html('Loading...');
+        jQuery.post('/influencemonk/wp-admin/admin-ajax.php',
+            {
+                'action': 'count_total_blogs',
+                'category': jQuery('[name=blog-option]').val()
+            },
+            function(response){
+                blogsNumber = response/10;
+                response.exit;
+
+                jQuery.post('/influencemonk/wp-admin/admin-ajax.php',
+                    {
+                        'action' : 'filter_blogs',
+                        'displayedPosts': jQuery('.blog-box').length,
+                        'category': jQuery('[name=blog-option]').val(),
+                        'called_at': 'load_more'
+                    },
+                    function(response){
+                        jQuery('.load-more').html(thisText);
+                        response=jQuery(response);
+                        jQuery('.blog-container .row').append(response);
+                        response.exit;
+
+                        if (blogsNumber == jQuery('.blog-box').length + 1) {
+                            jQuery('.load-more').hide();
+                        }else {
+                            jQuery('.load-more').show();
+                        }
+                    });
+
+
+            });
+    });
+
+
+    jQuery('[name=blog-option]').change(function() {
+        jQuery.post('/influencemonk/wp-admin/admin-ajax.php',
+            {
+                'action': 'count_total_blogs',
+                'category': jQuery('[name=blog-option]').val()
+            },
+            function(response){
+                blogsNumber = response/10;
+                response.exit;
+
+                jQuery.post('/influencemonk/wp-admin/admin-ajax.php',
+                    {
+                        'action' : 'filter_blogs',
+                        'displayedPosts': jQuery('.blog-box').length,
+                        'category': jQuery('[name=blog-option]').val(),
+                        'called_at': 'category_change'
+                    },
+                    function(response){
+                        response=jQuery(response);
+                        jQuery('.blog-container .row').html(response);
+                        response.exit;
+
+                        if (blogsNumber == jQuery('.blog-box').length) {
+                            jQuery('.load-more').hide();
+                        }else {
+                            jQuery('.load-more').show();
+                        }
+                    });
+
+
+            });
+    });
 });
