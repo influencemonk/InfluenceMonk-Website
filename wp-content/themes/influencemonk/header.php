@@ -5,9 +5,14 @@
     <meta charset="<?php bloginfo('charset');  ?>">
     <meta name='description' content="<?php bloginfo('description'); ?>">
 
-    <title>  <?php bloginfo('name') ?> <?php wp_title('  |  '); ?> </title>
-
     <?php wp_head(); ?>
+
+    <?php
+    if (is_front_page()) { ?>
+        <title><?php bloginfo('name') ?></title>
+    <?php }else { ?>
+        <title><?php wp_title('  '); ?> | <?php bloginfo('name') ?></title>
+    <?php }?>
 
     <?php
     if (is_single()) {
@@ -62,7 +67,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo get_home_url(); ?> "> <span>influence</span>Monk </a>
+        <a class="navbar-brand" href="<?php echo get_home_url(); ?> "> <img src="<?php echo get_template_directory_uri() ?>/img/influenceMonk.png" alt="InfluenceMonk"/> </a>
     </div>
     <div id="navbar" class="collapse navbar-collapse navbar-right"  itemscope itemtype="http://www.schema.org/SiteNavigationElement">
 

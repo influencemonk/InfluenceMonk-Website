@@ -95,7 +95,7 @@ function filter_blogs() {
                         <div class="image">
                             <img src="<?php echo get_the_post_thumbnail_url() ?>" />
                         </div>
-                        <h3><?php echo get_the_title(); ?></h3>
+                        <h2><?php echo get_the_title(); ?></h2>
                         <p><?php echo get_the_excerpt(); ?></p>
                         <div class="blog-footer">
                             <span class="date"><?php echo get_the_date(); ?></span>

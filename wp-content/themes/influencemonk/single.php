@@ -8,10 +8,9 @@
 				<div class="col-xs-12 col-sm-6 col-md-5">
 					<h1 class="title"><?php echo get_the_title(); ?></h1>
 					<p class="date"><?php echo get_the_date(); ?></p>
-					<p class="author">Posted by <?php echo get_the_author(); ?></p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-7">
-					<img src="<?php echo get_the_post_thumbnail_url(); ?>"/>
+					<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?> : InfluenceMonk"/>
 				</div>
 			</div>
 			<div class="row">
@@ -28,9 +27,52 @@
 					<div class="content">
 						<?php echo get_the_content(); ?>
 					</div>
+                    <p class="author"><img alt="<?php echo get_the_author(); ?>" src="<?php echo get_avatar_url( get_user_by('login', get_the_author())->ID ); ?>"/><?php echo get_user_by('login', get_the_author())->first_name . " " . get_user_by('login', get_the_author())->last_name; ?></p>
 				</div>
 			</div>
 		</div>
+
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "BlogPosting",
+                "mainEntityOfPage":{
+                    "@type":"WebPage",
+                    "@id":"<?php echo get_the_permalink(); ?>"
+                },
+                "headline": "<?php echo get_the_title(); ?>",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "<?php echo get_the_post_thumbnail_url(); ?>",
+                    "height": 512,
+                    "width": 1024
+                },
+                "datePublished": "<?php echo get_the_date(); ?>",
+                "dateModified": "<?php echo get_the_modified_date(); ?>",
+                "author": {
+                    "@type": "Person",
+                    "name": "<?php echo get_the_author(); ?>",
+                    "image": {
+                        "@type": "ImageObject",
+                        "url":"<?php echo get_avatar_url( get_user_by('login', get_the_author())->ID ); ?>",
+                        "height":"60",
+                        "width":"60"
+                    }
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "InfluenceMonk",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "<?php echo get_template_directory_uri() ?>/img/influenceMonk.png",
+                        "width": "380",
+                        "height": "60"
+                    }
+                },
+                "description": "<?php echo get_the_excerpt(); ?>",
+                "articleBody": "<?php echo strip_tags(get_the_content() ); ?>"
+            }
+        </script>
 
 	<?php endwhile;
 endif; ?>

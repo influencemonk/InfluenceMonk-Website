@@ -17,7 +17,7 @@
 				<h1>Influencer Marketing Blog</h1>
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-7 blog-first-image">
-						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID()) ?>"/>
+						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID()) ?>" alt="<?php echo get_the_title(); ?> : InfluenceMonk"/>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-5 blog-first-content">
 						<h2><?php echo get_the_title(); ?></h2>
@@ -64,9 +64,9 @@
 					<a href="<?php echo get_the_permalink(); ?>">
                         <div class="blog-box">
                             <div class="image">
-                                <img src="<?php echo get_the_post_thumbnail_url() ?>" />
+                                <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php echo get_the_title(); ?> : InfluenceMonk"/>
                             </div>
-                            <h3><?php echo get_the_title(); ?></h3>
+                            <h2><?php echo get_the_title(); ?></h2>
                             <p><?php echo get_the_excerpt(); ?></p>
                             <div class="blog-footer">
                                 <span class="date"><?php echo get_the_date(); ?></span>

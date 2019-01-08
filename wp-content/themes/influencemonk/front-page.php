@@ -9,7 +9,7 @@
                     <span>Targeted Influencer Marketing</span>
                     <span>at your fingertips</span>
                 </h1>
-                <span>We help you with branding and generating leads using many micro-influencers who have a small targeted following that trusts them.</span>
+                <span>We help you with branding and generating leads using many influencers who have a small targeted following that trusts them.</span>
 
                 <div class="buttons">
                     <a target="_blank" href="https://calendly.com/influencemonk/influencer-marketing">Let's get started</a>
@@ -29,8 +29,8 @@
     <div class="container">
 
         <div class="header">
-            <span class="subheading">Micro-Influencer Marketing takes Influencer Marketing to the next level!</span>
-            <h2 class="heading">Why Micro-Influencer Marketing?</h2>
+<!--            <span class="subheading">Influencer Marketing takes Influencer Marketing to the next level!</span>-->
+            <h2 class="heading">Why Influencer Marketing?</h2>
         </div>
 
         <div class="row">
@@ -159,4 +159,28 @@
 
     </div>
 </div>
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "InfluenceMonk",
+        "url": "<?php echo get_site_url(); ?>",
+        "logo": "<?php echo get_template_directory_uri(); ?>/img/influencemonk.png",
+        "foundingDate": "2018"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer success",
+        "email": "hello@influencemonk.com"
+    },
+    "sameAs": [
+        "https://www.facebook.com/influencemonk",
+        "https://www.instagram.com/influencemonk/",
+        "https://twitter.com/influencemonk",
+        "https://www.linkedin.com/company/influencemonk"
+    ]
+}
+</script>
+
 <?php get_footer(); ?>

@@ -199,7 +199,7 @@ jQuery(document).ready(function(){
     jQuery('.load-more').click(function() {
         let thisText = jQuery(this).html();
         jQuery(this).html('Loading...');
-        jQuery.post('/influencemonk/wp-admin/admin-ajax.php',
+        jQuery.post('/wp-admin/admin-ajax.php',
             {
                 'action': 'count_total_blogs',
                 'category': jQuery('[name=blog-option]').val()
@@ -208,7 +208,7 @@ jQuery(document).ready(function(){
                 blogsNumber = response/10;
                 response.exit;
 
-                jQuery.post('/influencemonk/wp-admin/admin-ajax.php',
+                jQuery.post('/wp-admin/admin-ajax.php',
                     {
                         'action' : 'filter_blogs',
                         'displayedPosts': jQuery('.blog-box').length,
@@ -234,7 +234,7 @@ jQuery(document).ready(function(){
 
 
     jQuery('[name=blog-option]').change(function() {
-        jQuery.post('/influencemonk/wp-admin/admin-ajax.php',
+        jQuery.post('/wp-admin/admin-ajax.php',
             {
                 'action': 'count_total_blogs',
                 'category': jQuery('[name=blog-option]').val()
@@ -243,7 +243,7 @@ jQuery(document).ready(function(){
                 blogsNumber = response/10;
                 response.exit;
 
-                jQuery.post('/influencemonk/wp-admin/admin-ajax.php',
+                jQuery.post('/wp-admin/admin-ajax.php',
                     {
                         'action' : 'filter_blogs',
                         'displayedPosts': jQuery('.blog-box').length,
