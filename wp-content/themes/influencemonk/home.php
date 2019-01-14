@@ -39,7 +39,8 @@
 		<select name="blog-option">
 			<option value="all">everything</option>
 			<?php
-			$args = array('parent' => get_cat_ID('Blogs'));
+			$args = array('parent' => ('Blogs'));
+
 			$categories = get_categories($args);
 
 			foreach ($categories as $category){ ?>
