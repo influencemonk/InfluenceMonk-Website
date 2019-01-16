@@ -635,6 +635,8 @@ body.vertical-center {
     background: white;
     transition: .3s;
 }
+
+
 .modal-body .modal-formgroup label.active {
     font-size: 11px;
     top: -10px;
@@ -648,10 +650,10 @@ body.vertical-center {
     margin-top: -5px;
     font-weight: 900;
 }
-.modal input {
+.modal input , select {
     margin: 20px 0;
 }
-.modal input:focus {
+.modal input:focus ,.modal select:focus {
     border-color: #ff0000aa;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,0,0,.6);
 }
