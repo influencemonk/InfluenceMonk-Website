@@ -130,35 +130,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="getstarted" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Let's get Started</h4>
-            </div>
-            <div class="modal-body">
-                <div class="modal-formgroup">
-                    <label>Name</label>
-                    <input type="text" name="user-name" class="form-control">
-                </div>
-                <div class="modal-formgroup">
-                    <label>Email</label>
-                    <input type="email" name="user-email" class="form-control">
-                </div>
-                <div class="modal-formgroup">
-                    <label>Instagram Id</label>
-                    <input type="text" name="user-insta-id" class="form-control">
-                </div>
-                <p class="message hide"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn">Submit</button>
-            </div>
-        </div>
 
-    </div>
-</div>
 
 <script type="application/ld+json">
     {
