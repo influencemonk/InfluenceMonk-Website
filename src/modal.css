@@ -171,7 +171,7 @@
   }
 
   .hideModal{
-    animation:scaleDown 1s ;
+    display: none;
    
 }
 
