@@ -1,12 +1,24 @@
 <?php
+session_start();
+
 /*
 ========================================================
- * Include CSS and JS Files
+ * Dynamic Title
 ========================================================
 */
 
-session_start();
+function dynamic_title() {
+	add_theme_support( 'title-tag' );
+}
 
+add_action( 'after_setup_theme', 'dynamic_title' );
+
+
+/*
+========================================================
+ * Added css and js files
+========================================================
+*/
 
 function files_enqueue() {
     wp_enqueue_script('bootstrapjs', get_template_directory_uri().'/assets/js/bootstrap.min.js', array(), '1.0.0', true);

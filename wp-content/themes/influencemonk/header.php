@@ -3,16 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="<?php bloginfo('charset');  ?>">
-    <meta name='description' content="<?php bloginfo('description'); ?>">
 
     <?php wp_head(); ?>
-
-    <?php
-    if (is_front_page()) { ?>
-        <title><?php bloginfo('name') ?></title>
-    <?php }else { ?>
-        <title><?php wp_title('  '); ?> | <?php bloginfo('name') ?></title>
-    <?php }?>
 
     <?php
     if (is_single()) {
@@ -34,7 +26,7 @@
         wp_reset_query(); ?>
 
     <?php }else { ?>
-	    <meta name="og:title" property="og:title" content="<?php bloginfo('name') ?> <?php wp_title('  |  '); ?>">
+	    <meta name="og:title" property="og:title" content="<?php bloginfo('name') ?>">
         <meta name="og:type" property="og:type" content="website">
         <meta name="og:description" property="og:description" content="<?php bloginfo('description'); ?>">
     <?php } ?>
