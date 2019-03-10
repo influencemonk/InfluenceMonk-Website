@@ -29,7 +29,6 @@
     <div class="container">
 
         <div class="header">
-<!--            <span class="subheading">Influencer Marketing takes Influencer Marketing to the next level!</span>-->
             <h2 class="heading">Why Influencer Marketing?</h2>
         </div>
 
@@ -109,7 +108,7 @@
 <div class="bottom-cta">
     <div class="container">
         <h2 class="title">Ready to rock your influencer marketing campaigns?</h2>
-        <button data-toggle="modal" data-target="#getstarted">Get started now</button>
+        <a href="https://calendly.com/influencemonk/influencer-marketing" class="button">Get started now</a>
     </div>
 </div>
 
